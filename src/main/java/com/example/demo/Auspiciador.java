@@ -1,6 +1,7 @@
 package com.example.demo;
 
-import org.hibernate.mapping.Set;
+
+ 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -19,7 +20,9 @@ public class Auspiciador {
 	private Integer id;
     private String nombre ;
     private Integer monto;
-private Set<Artista> artista= new HashSet<Artista>();
+    @OneToMany(targetEntity = Artista.class, mappedBy = "auspiciador")
+    @OrderBy("nombre ASC")
+private Set<Artista> artistas = new HashSet<Artista>();
 
     public Auspiciador() {
     }

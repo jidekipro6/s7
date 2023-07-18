@@ -8,7 +8,7 @@ import java.util.List;
 
 
 
-@RepositoryRestResource(collectionResourceRel = "Auspiciador", path = "Auspiciador")
+@RepositoryRestResource(collectionResourceRel = "Auspiciadores", path = "Artistas")
 public interface AuspiciadorRepository extends PagingAndSortingRepository< Artista, Integer>,CrudRepository<Artista, Integer> {
     
     List<Artista> findByNombre(@Param("nombre") String nombre);
