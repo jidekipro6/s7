@@ -1,5 +1,5 @@
 
-@server = https://jidekipro6-urban-couscous-q49xpj4p97w295pj-8030.preview.app.github.dev
+@server = https://jidekipro6-glorious-orbit-4vgrw5vw7x5hjpgp-8080.preview.app.github.dev
 @apiserver = {{server}}/api/Artista
 ###
  GET {{server}}/
@@ -11,7 +11,7 @@
 ###
 GET {{server}}/listar
 ###
-POST {{server}}/nuevo
+POST {{server}}/api/Artista/nuevo
 Content-Type: application/x-www-form-urlencoded
 
 nombre=RAUL&genero=regueton&albun=oasis
