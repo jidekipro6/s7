@@ -1,0 +1,45 @@
+@server = https://jidekipro6-urban-couscous-q49xpj4p97w295pj-8030.preview.app.github.dev
+###
+GET {{server}}
+###
+GET {{server}}/Artista
+###
+GET {{server}}/Artista/2
+###
+GET {{server}}/Artista?size=2
+###
+GET {{server}}/Artista?size=2&page=1
+###
+GET {{server}}/Artista?sort=nombre,genero,albun
+###
+GET {{server}}/Artista?sort=nombre,asc
+###
+GET {{server}}/Artista?sort=creditos,desc
+###
+POST {{server}}/api/Artista/nuevo
+Content-Type: application/json
+
+{"nombre": "Raul", "genero": "regueton","albun": "oasis"}
+###
+DELETE {{server}}/Artista/102
+###
+PATCH {{server}}/Artista/55
+Content-Type: application/json
+
+{"creditos": 5}
+
+###
+GET {{server}}/profile/cursos
+
+###
+GET {{server}}/cursos/search/findByNombre?nombre=Inteligencia+Artificial+1
+
+
+#######CARRERA
+GET {{server}}/carreras
+###
+POST {{server}}/carreras
+Content-Type: application/json
+
+{"nombre": "CONTABILIDAD"  }
+
