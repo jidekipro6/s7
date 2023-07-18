@@ -3,11 +3,14 @@ package com.example.demo;
 
     
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
- import jakarta.persistence.Table;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
 
 @Entity // This tells Hibernate to make a table out of this class
 @Table(name = "artista")
@@ -21,6 +24,9 @@ public class Artista {
 	private String genero;
 
     private String albun;
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "id_auspiciador")
+    private Auspiciador auspiciador;
 
     public Artista() {
     }
@@ -55,6 +61,14 @@ public class Artista {
 
     public void setAlbun(String albun) {
         this.albun = albun;
+    }
+
+    public Auspiciador getAuspiciador() {
+        return auspiciador;
+    }
+
+    public void setAuspiciador(Auspiciador auspiciador) {
+        this.auspiciador = auspiciador;
     }
 
     
