@@ -40,7 +40,7 @@ public class MainController {
 	
 
 	@PostMapping(path="/nuevo") // Map ONLY POST Requests
-	public @ResponseBody String nuevo (@RequestParam Integer id, @RequestParam String nombre , 
+	public @ResponseBody String nuevo ( @RequestParam String nombre , 
     @RequestParam String genero , @RequestParam String albun ) {
 		Artista n = new Artista();
 	
