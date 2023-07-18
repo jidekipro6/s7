@@ -39,7 +39,7 @@ public class MainController {
 
 	
 
-	@PostMapping(path="/nuevo") 
+	@PostMapping(path="/api/Artista/nuevo") 
 	public @ResponseBody String nuevo (@RequestParam String nombre , 
     @RequestParam String genero , @RequestParam String albun ) {
 		Artista n = new Artista();
