@@ -39,12 +39,11 @@ public class MainController {
 
 	
 
-	@PostMapping(path="/nuevo") // Map ONLY POST Requests
-	public @ResponseBody String nuevo ( @RequestParam String nombre , 
+	@PostMapping(path="/nuevo") 
+	public @ResponseBody String nuevo (@RequestParam String nombre , 
     @RequestParam String genero , @RequestParam String albun ) {
 		Artista n = new Artista();
-	
-		n.setNombre(nombre);
+	    n.setNombre(nombre);
 		n.setGenero(genero);
         n.setAlbun(albun);
 		repository.save(n);

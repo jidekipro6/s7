@@ -16,10 +16,9 @@ GET {{server}}/Artista?sort=nombre,asc
 ###
 GET {{server}}/Artista?sort=creditos,desc
 ###
-POST {{server}}/api/Artista/nuevo
-Content-Type: application/json
-
-{"nombre": "Raul", "genero": "regueton","albun": "oasis"}
+POST {{server}}/nuevo
+Content-Type: application/x-www-form-urlencoded
+{"nombre":"Raul","genero":"regueton","albun":"oasis"}
 ###
 DELETE {{server}}/Artista/102
 ###
