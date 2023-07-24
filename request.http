@@ -1,21 +1,23 @@
+ @server = INSERTAR URL DE RENDER ACÁ
+@api = {{server}}/api/ec3
 
-@server = https://jidekipro6-glorious-orbit-4vgrw5vw7x5hjpgp-8080.preview.app.github.dev
-@apiserver = {{server}}/api/Artista
+################ Categorias: ################
 ###
- GET {{server}}/
+GET {{api}}/categorias
 ###
- GET {{server}}/codigo
-###
- GET {{server}}/nombre-codigo
+POST {{api}}/categorias
+Content-Type: application/json
 
+{"nombre": "Instrumentos de Cuerda"}
+################ Instrumentos: ################
 ###
-GET {{server}}/listar
+GET {{api}}/instrumentos
 ###
-POST {{server}}/api/Artista/nuevo
-Content-Type: application/x-www-form-urlencoded
+POST {{api}}/instrumentos
+Content-Type: application/json
 
-nombre=RAUL&genero=regueton&albun=oasis
+{"nombre": "Guitarra", "categoria": "http://localhost/api/ec3/categorias/1"}
 ###
-DELETE {{apiserver}}/eliminar
-Content-Type: application/application/x-www-form-urlencoded
-id=1
+GET {{api}}/instrumentos/1/categoria
+###
+GET {{api}}/instrumentos?sort=nombre,desc
